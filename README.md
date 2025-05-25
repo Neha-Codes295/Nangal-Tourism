@@ -61,5 +61,3 @@ Experience the site live here: [Nangal Tourism](https://nangal-tourism.onrender.
 *Contributions and feedback are welcome! Please open an issue or pull request on GitHub.*
 
 ---
-
-If you'd like, I can also help you add badges, screenshots, or deployment instructions for platforms like Render or Netlify — just let me know!
