@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Responsive design meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- SEO meta -->
+  <meta name="description" content="Discover the serene beauty and cultural heritage of Nangal with Nangal Tourism. Plan your perfect visit today!" />
+  <meta name="keywords" content="Nangal, Tourism, Bhakra Dam, Sutlej Park, Shivalik Hills, Travel, Nature" />
+  <meta name="author" content="Nangal Tourism" />
+  
+  <title>Nangal Tourism | Discover Tranquility</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS CDN
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUa6mhJ7n/z+3hphF9nA7U8bJ9BJvFaSX11DpZ5p0ssM2CvuFjsM1Fv5oz9B"
+    crossorigin="anonymous"
+  /> -->
+  
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body>
+
+  <!-- Include header partial -->
+  <%- include('partials/header') %>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero text-center py-5 bg-light" role="banner" aria-label="Hero section introducing Nangal Tourism">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-primary">Discover Nangal</h1>
+        <p class="lead text-secondary">Your gateway to nature, serenity, and cultural heritage.</p>
+        <a href="/contact" class="btn btn-primary btn-lg mt-3" role="button" aria-label="Plan your visit to Nangal">Plan Your Visit</a>
+      </div>
+    </section>
+
+    <!-- Scenic Carousel -->
+    <section class="scenic-testimonials py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5">Nangal in Pictures</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Scenic Testimonials">
+
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+
+          <!-- Carousel items -->
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <img src="/images/nangal-view.webp" class="d-block mx-auto img-fluid rounded shadow mb-3" alt="Nangal valley view" />
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"Feel the calmness of the valley."</p>
+              </blockquote>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/images/sutlej-river.jpg" class="d-block mx-auto img-fluid rounded shadow mb-3" alt="Bhakra Dam and Sutlej River" />
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"Majestic waterworks that power the region."</p>
+              </blockquote>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/images/sunset.jpg" class="d-block mx-auto img-fluid rounded shadow mb-3" alt="Sunset at Nangal hills" />
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"Witness breathtaking sunsets behind the hills."</p>
+              </blockquote>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/images/forest.jpg" class="d-block mx-auto img-fluid rounded shadow mb-3" alt="Nature trail in Nangal forest" />
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"Nature trails perfect for soul-refreshing walks."</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous slide">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next slide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Destinations Section -->
+    <section class="asin-places py-5 bg-white" aria-labelledby="asin-places-title">
+      <div class="container text-center">
+        <h2 id="asin-places-title" class="mb-4 fw-bold text-primary">Asin Places</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 border rounded-4 shadow-sm h-100 d-flex flex-column">
+              <img src="/images/hill.jpg" class="img-fluid mb-3 rounded" alt="Shivalik Hills" loading="lazy" />
+              <h3 class="h5 fw-semibold">Shivalik Hills</h3>
+              <p class="text-muted flex-grow-1">Explore scenic trails and panoramic views from these peaceful forested hills.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded-4 shadow-sm h-100 d-flex flex-column">
+              <img src="/images/park.jpg" class="img-fluid mb-3 rounded" alt="Sutlej Park" loading="lazy" />
+              <h3 class="h5 fw-semibold">Sutlej Park</h3>
+              <p class="text-muted flex-grow-1">A beautiful riverside park, perfect for family outings, walks, and photography.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded-4 shadow-sm h-100 d-flex flex-column">
+              <img src="/images/bhakra-dam.jpg" class="img-fluid mb-3 rounded" alt="Bhakra Dam" loading="lazy" />
+              <h3 class="h5 fw-semibold">Bhakra Dam</h3>
+              <p class="text-muted flex-grow-1">One of India’s greatest engineering marvels offering stunning views and calm waters.</p>
+            </div>
+          </div>
+        </div>
+        <a href="/places" class="btn btn-outline-primary mt-4">Explore More Places</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Include footer partial -->
+  <%- include('partials/footer') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <!-- <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoYlXv1P6v6U6l4K6QtWzFvg5W5zFiw6Ed9L+9QZz6r8rX"
+    crossorigin="anonymous"
+    defer
+  ></script> -->
+
+  <!-- Your main JS -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

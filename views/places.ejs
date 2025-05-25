@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Nangal's Destinations | Discover Nature & Heritage</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <meta name="description" content="Discover the top places to visit in Nangal including Bhakra Dam, Sutlej River, and Nangal Wetlands with beautiful photos and travel info." />
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <main class="py-5 bg-light">
+    <div class="container">
+      <h1 class="text-center fw-bold text-primary mb-5">Top Places to Visit in Nangal</h1>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <article class="col-md-4">
+          <a href="https://www.google.com/maps/place/Bhakra+Dam/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark" aria-label="Learn more about Bhakra Dam">
+            <div class="card h-100 shadow-sm hover-scale">
+              <img src="/images/bhakra-dam.jpg" class="card-img-top" alt="View of Bhakra Dam, Nangal" loading="lazy" />
+              <div class="card-body">
+                <h2 class="card-title h5">Bhakra Dam</h2>
+                <p class="card-text">A massive dam offering breathtaking views of the reservoir and surrounding hills.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="col-md-4">
+          <a href="https://www.google.com/maps/place/Sutlej+River/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark" aria-label="Learn more about Sutlej River">
+            <div class="card h-100 shadow-sm hover-scale">
+              <img src="/images/sutlej-river.jpg" class="card-img-top" alt="Calm Sutlej River banks" loading="lazy" />
+              <div class="card-body">
+                <h2 class="card-title h5">Sutlej River</h2>
+                <p class="card-text">Calm riverbanks perfect for peaceful walks, picnics, and stunning photography.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="col-md-4">
+          <a href="https://www.google.com/maps/place/Nangal+Wetlands/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark" aria-label="Learn more about Nangal Wetlands">
+            <div class="card h-100 shadow-sm hover-scale">
+              <img src="/images/nangal-wetlands.jpg" class="card-img-top" alt="Serene Nangal Wetlands" loading="lazy" />
+              <div class="card-body">
+                <h2 class="card-title h5">Nangal Wetlands</h2>
+                <p class="card-text">A serene paradise for birdwatchers and nature lovers seeking calm and beauty.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    /* Subtle scale-up effect on card hover for engagement */
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+      z-index: 5;
+      box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  </style>
+
+</body>
+</html>

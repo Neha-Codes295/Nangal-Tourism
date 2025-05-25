@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Nangal | Discover Tranquility</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- SEO and Accessibility -->
+  <meta name="description" content="Learn about Nangal's scenic beauty, Bhakra Dam, and what visitors say about this serene town." />
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <main class="my-5">
+    <!-- About Section -->
+    <section class="about-nangal py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">About Nangal</h2>
+        <p class="lead text-center mx-auto" style="max-width: 700px;">
+          Nangal is renowned for its scenic beauty, lush greenery, and the majestic Bhakra Dam built across the Sutlej River.  
+          This peaceful town, surrounded by hills, serves as an important hub for hydroelectric power generation and irrigation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+    <section class="testimonials py-5 bg-white">
+      <div class="container">
+        <!-- <h2 class="text-center fw-bold mb-5">What Visitors Say</h2> -->
+        <h2 class="text-center fw-bold mb-5">What Visitors Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Visitor Testimonials">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active text-center px-3 px-md-5">
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"Nangal is a hidden gem! The peaceful environment and beautiful views made my trip unforgettable."</p>
+                <footer class="blockquote-footer mt-3">Ravi Kumar</footer>
+              </blockquote>
+            </div>
+
+            <div class="carousel-item text-center px-3 px-md-5">
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"The Bhakra Dam views were breathtaking. A perfect place for family outings and nature lovers."</p>
+                <footer class="blockquote-footer mt-3">Meena Sharma</footer>
+              </blockquote>
+            </div>
+
+            <div class="carousel-item text-center px-3 px-md-5">
+              <blockquote class="blockquote">
+                <p class="fs-5 fst-italic">"I loved birdwatching at Nangal Wetlands. So serene and full of life."</p>
+                <footer class="blockquote-footer mt-3">Arjun Singh</footer>
+              </blockquote>
+            </div>
+
+          </div>
+
+          <button 
+            class="carousel-control-prev" 
+            type="button" 
+            data-bs-target="#testimonialCarousel" 
+            data-bs-slide="prev" 
+            aria-label="Previous testimonial">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+
+          <button 
+            class="carousel-control-next" 
+            type="button" 
+            data-bs-target="#testimonialCarousel" 
+            data-bs-slide="next" 
+            aria-label="Next testimonial">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #0d9488;
+  --primary-dark: #0f766e;
+  --accent-color: #ccfbf1;
+  --text-color: #1f2937;
+  --bg-color: #f8fafc;
+  --white: #ffffff;
+  --shadow-light: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --radius: 18px;
+  --font-family: 'Inter', sans-serif;
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --btn-hover-shadow: 0 10px 20px rgba(13, 148, 136, 0.4);
+  --focus-outline: 2px solid #0d9488;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.85;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--primary-dark);
+  outline-offset: 2px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  color: var(--white);
+  padding: 1.75rem 0;
+  text-align: center;
+  box-shadow: var(--shadow-medium);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  animation: slideDown 0.5s ease-out forwards;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.15rem;
+  position: relative;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background: var(--accent-color);
+  width: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.85rem 2.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--btn-hover-shadow);
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-light);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--accent-color), #d0f4ef);
+  padding: 6rem 1rem 7rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out forwards;
+  border-radius: var(--radius);
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: var(--shadow-medium);
+}
+
+.hero h1,
+.hero h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.07);
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: #2f3a47;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.hero .btn {
+  margin-top: 2.5rem;
+  padding: 1rem 3rem;
+}
+
+/* Intro Section */
+.intro {
+  padding: 5rem 2rem 6rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fafafa;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+  transition: background-color 0.3s ease;
+}
+
+.intro img {
+  width: 100%;
+  max-width: 620px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-medium);
+  margin-bottom: 2.5rem;
+  transition: transform 0.4s ease;
+}
+
+.intro img:hover,
+.intro img:focus-visible {
+  transform: scale(1.05);
+  outline: none;
+}
+
+.intro p {
+  font-size: 1.15rem;
+  color: #555555;
+  line-height: 1.9;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Places Grid */
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 5rem 3rem;
+}
+
+.place-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.place-card:hover,
+.place-card:focus-within {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+  outline: none;
+}
+
+.place-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--primary-color);
+  transition: transform 0.4s ease;
+}
+
+.place-card:hover img,
+.place-card:focus-within img {
+  transform: scale(1.08);
+}
+
+.place-card h3 {
+  padding: 1.25rem 1.25rem 0.75rem;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.place-card p {
+  padding: 0 1.25rem 1.5rem;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+form {
+  background: var(--white);
+  padding: 3.5rem 3rem;
+  border-radius: var(--radius);
+  max-width: 650px;
+  margin: 5rem auto;
+  box-shadow: var(--shadow-medium);
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover,
+form:focus-within {
+  box-shadow: var(--shadow-strong);
+}
+
+form label {
+  display: block;
+  margin-top: 1.75rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  letter-spacing: 0.02em;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1.8px solid #d0d7de;
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+  outline: none;
+}
+
+form button {
+  margin-top: 2.8rem;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius);
+}
+
+/* About Section */
+.about-nangal {
+  padding: 6rem 2rem 7rem;
+  background: linear-gradient(135deg, #e6f7f1, #d0f4ef);
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+}
+
+.about-nangal h2 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #007bff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 123, 255, 0.5);
+}
+
+.about-nangal p {
+  font-size: 1.35rem;
+  color: #374151;
+  line-height: 2.2;
+  max-width: 850px;
+  margin: 0 auto;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+
+
+/* Footer */
+
+footer {
+  background-color: var(--primary-color); /* same as header */
+  color: var(--white);
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  /* remove mt-5, border-top, bg-light styles from HTML */
+  /* Optional: keep footer sticky or fixed if desired */
+  /* position: sticky; bottom: 0; z-index: 1000; */
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0.2rem 0; /* smaller vertical spacing like header's nav links */
+}
+
+/* If you want some spacing and alignment like nav links */
+footer span {
+  color: #e25555; /* keep the red heart color */
+  font-weight: 700;
+}
+
+
+/* Testimonials */
+.testimonials {
+  background: linear-gradient(135deg, #f9f9f9, #e6f2ff);
+  padding: 5rem 1rem;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.testimonials h2::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.carousel-item blockquote {
+  background: #ffffff;
+  border-left: 5px solid #007bff;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item blockquote:hover {
+  transform: translateY(-5px);
+}
+
+.blockquote-footer {
+  font-weight: 600;
+  color: #333;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+/* Featured Destinations */
+.featured-destinations {
+  background: linear-gradient(135deg, #f3f9ff 0%, #e6f0fa 100%);
+  padding: 5rem 0;
+}
+
+.featured-destinations h2 {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.featured-destinations h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.featured-destinations .card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.featured-destinations .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.featured-destinations .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.featured-destinations .card-title {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.featured-destinations .card-text {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .hero h1,
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-item blockquote {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #e2e8f0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #111;
+}
+
+body.dark-mode .hero,
+body.dark-mode .about-nangal {
+  background-color: #263238;
+  color: #eee;
+}
+
+body.dark-mode nav a {
+  color: #ccc;
+}
+
+body.dark-mode .place-card,
+body.dark-mode form {
+  background-color: #2a2a2a;
+  color: #ddd;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #444;
+  color: #f2f2f2;
+  border: 1px solid #555;
+}
+
+body.dark-mode form button {
+  background-color: #3b3b3b;
+}
