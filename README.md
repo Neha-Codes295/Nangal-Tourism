@@ -38,20 +38,28 @@ Experience the site live here: [Nangal Tourism](https://nangal-tourism.onrender.
 2. **Run the server:**
     npm start
     Open http://localhost:3000 in your browser to explore the site locally.
+---
 
-🗺️ Key Attractions
-Bhakra Dam – One of the world’s tallest gravity dams, offering spectacular reservoir views.
+## 🗺️ Key Attractions
 
-Sutlej River – Serene riverbanks perfect for leisure and photography.
+- **Bhakra Dam** – One of the world’s tallest gravity dams, offering spectacular reservoir views.  
+- **Sutlej River** – Serene riverbanks perfect for leisure and photography.  
+- **Nangal Wetlands** – A peaceful sanctuary and hotspot for birdwatchers.  
 
-Nangal Wetlands – A peaceful sanctuary and hotspot for birdwatchers.
+---
 
-🔗 Useful Links
-GitHub Repository : https://github.com/Neha-Codes295/nangal-tourism
-Live Project : https://nangal-tourism.onrender.com/
-LinkedIn : https://www.linkedin.com/in/neha-iiitu/
+## 🔗 Useful Links
+
+- [GitHub Repository](https://github.com/Neha-Codes295/nangal-tourism)  
+- [Live Project](https://nangal-tourism.onrender.com/)  
+- [LinkedIn Profile](https://www.linkedin.com/in/neha-iiitu/)  
+
+---
 
 ❤️ Made with love for Nangal and travel enthusiasts around the world!
 
-Contributions and feedback are welcome! Please open an issue or pull request on GitHub.
-Let me know if you want me to add badges, screenshots, or deployment instructions for platforms like Render or Netlify!
+*Contributions and feedback are welcome! Please open an issue or pull request on GitHub.*
+
+---
+
+If you'd like, I can also help you add badges, screenshots, or deployment instructions for platforms like Render or Netlify — just let me know!
